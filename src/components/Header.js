@@ -1,6 +1,6 @@
 import React from 'react';
 
-// import { NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 // image imports
 import logo from '../images/logo.png';
@@ -13,8 +13,8 @@ const Header = () => {
         <header>
             <img src={logo} alt="hedliner website logo" />
             <nav>
-                <a href='/'>Search</a>
-                <a href='/'>Contact</a>
+                <NavLink to='/'>Home</NavLink>
+                <NavLink to='Contact'>Contact</NavLink>
             </nav>
             <LoginSignup />
         </header>
