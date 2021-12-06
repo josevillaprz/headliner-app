@@ -17,7 +17,6 @@ export default Hero;
 
 const styles = {
     container: {
-        backgroundColor: 'red',
         height: '540px',
         maxWidth: '90%',
         margin: '0 auto',
