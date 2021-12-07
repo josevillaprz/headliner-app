@@ -6,11 +6,11 @@ import { Route, Switch } from 'react-router-dom';
 import HomePage from '../pages/Homepage'
 import Contact from '../pages/Contact'
 
-const Routes = () => {
+const Routes = (props) => {
     return(
         <React.Fragment>
         <Switch>
-            <Route exact path='/' render={() => <HomePage/>}/>
+            <Route exact path='/' render={() => <HomePage events={props.events}/>}/>
             <Route exact path='/Contact' render={() => <Contact/>}/>
         </Switch>
         </React.Fragment>

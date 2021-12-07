@@ -9,7 +9,7 @@ const Footer = () => {
             <NavLink to='/'><img src={logo} alt="hedliner website logo" style={styles.logo}/></NavLink>
             <nav>
                 <NavLink to='/' style={styles.navlink}>Home</NavLink>
-                <NavLink to='Contact' style={styles.navlink}>Contact</NavLink>
+                <NavLink to='/Contact' style={styles.navlink}>Contact</NavLink>
             </nav>
         </footer>
     );
