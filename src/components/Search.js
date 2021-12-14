@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Search = () => {
+const Search = (props) => {
     return(
-        <form style={styles.container}>
+        <form style={styles.container} onSubmit={props.event}>
             <input style={styles.input} type="search" placeholder="Search for artists, venues, and events"/>
-            <button style={styles.button} type="submit">Search</button>
+            <button style={styles.button} type="submit" >Search</button>
         </form>
     )
 }

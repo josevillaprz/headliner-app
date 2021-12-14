@@ -3,12 +3,12 @@ import React from 'react';
 import HeroImg from '../images/hero.jpg'
 import Search from './Search'
 
-const Hero = () => {
+const Hero = (props) => {
     return (
         <div style={styles.container}>
-            <h1>Find Your next big event.</h1>
+            <h1>Find Your next big music event.</h1>
             <p>Discover amazing events near you.</p>
-            <Search/>
+            <Search event={props.event}/>
         </div>
     )
 }
