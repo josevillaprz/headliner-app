@@ -1,12 +1,18 @@
 import React from 'react';
 
+import Button from '../components/Button'
+
 const EventCard = (props) => {
     return (
-        <article style={styles.container}>
+        <li style={styles.container}>
             <img src={props.event.images[1].url} alt="event promotion" style={styles.img}/>
-            <p>{props.event.name}</p>
-            <p>{props.event.dates.start.localDate}</p>
-        </article>
+            <div style={styles.details}>
+                <p style={styles.title}>{props.event.name}</p>
+                <p style={styles.location}> {props.event._embedded.venues[0].city.name} ,{props.event._embedded.venues[0].country.countryCode}</p>
+                <p style={styles.date}>{props.event.dates.start.localDate}</p>
+            </div>
+            <Button btnText='Tickets' url={props.event.url} style={styles.btn}/>
+        </li>
     );
 };
 
@@ -15,16 +21,44 @@ export default EventCard;
 const styles = {
     container: {
         width: '336px',
-        minHeight: '307',
+        height: '360px',
         backgroundColor: '#F7F7F7',
         borderRadius: '20px',
         boxShadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px',
-        margin: '10px'
+        margin: '20px',
+        listStyleType: 'none',
     }, 
+
+    details: {
+        borderRadius: '0 0 20px 20px',
+        display: 'grid', 
+        gridTemplateColumns: '50% 50%',
+        gridTemplateRows: '60px 40px',
+        justifyContent: 'center',
+        padding: '0 15px',
+        marginBottom: '15px',
+    },
 
     img: {
         width: '100%',
         height: '200px',
         borderRadius: '20px 20px 0 0'
-    }
+    },
+
+    title: {
+        font: '900 18px lato',
+        color: '#1F2B45',
+        gridColumn: '1 / 3',
+        alignSelf: 'start'
+    },
+
+    location: {
+        font: '400 16px lato',
+        alignSelf: 'end'
+    },
+
+    date: {
+        font: '700 16px lato',
+        alignSelf: 'end'
+    },
 }

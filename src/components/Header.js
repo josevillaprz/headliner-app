@@ -5,9 +5,6 @@ import { NavLink } from 'react-router-dom'
 // image imports
 import logo from '../images/logo.png';
 
-// component imports
-import LoginSignup from './LoginSignup'
-
 const Header = () => {
     return (
         <header style={styles.header}>
@@ -16,7 +13,6 @@ const Header = () => {
                 <NavLink to='/' style={styles.navlink}>Home</NavLink>
                 <NavLink to='Contact' style={styles.navlink}>Contact</NavLink>
             </nav>
-            <LoginSignup />
         </header>
     )
 }

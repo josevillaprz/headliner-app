@@ -22,7 +22,6 @@ const HomePage = (props) => {
             async function fetchAPI(){
                 const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&keyword=${searchText}&apikey=bKX5jS9T2TlroD8wMcQ0Gth24As1CZF6`);
                 const data = await response.json();
-                console.log(data._embedded.events)
                 setEventList(data._embedded.events)
             }
             fetchAPI();
@@ -32,7 +31,7 @@ const HomePage = (props) => {
     return(
         <div>
             <Hero event={NewSearch}/>
-            {eventList !== null && <EventList title='Search results...' events={eventList} /> }
+            {eventList !== null && <EventList title='Search results...' events={eventList}/> }
         </div>
     )
 }

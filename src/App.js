@@ -13,7 +13,7 @@ function App() {
 
   return (
     <Router>
-      <div className="App">
+      <div className="App" style={styles.container}>
         <Header/>
           <main>
             <Routes />
@@ -26,3 +26,11 @@ function App() {
 }
 
 export default App;
+
+
+const styles = {
+  container: {
+    position: 'relative',
+    minHeight: '100vh'
+  }
+}

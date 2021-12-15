@@ -26,7 +26,7 @@ const styles = {
         height: '100px',
         padding: '0 102px',
         justifyContent: 'space-between',
-        
+        marginTop: '40vh'
     },
 
     logo: {

@@ -3,7 +3,7 @@ import React from 'react';
 const Search = (props) => {
     return(
         <form style={styles.container} onSubmit={props.event}>
-            <input style={styles.input} type="search" placeholder="Search for artists, venues, and events"/>
+            <input style={styles.input} type="search" placeholder="Search for artists, city, or events"/>
             <button style={styles.button} type="submit" >Search</button>
         </form>
     )

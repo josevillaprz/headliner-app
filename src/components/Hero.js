@@ -6,8 +6,8 @@ import Search from './Search'
 const Hero = (props) => {
     return (
         <div style={styles.container}>
-            <h1>Find Your next big music event.</h1>
-            <p>Discover amazing events near you.</p>
+            <h1 style={styles.h1}>Find Your next big music event.</h1>
+            <p style={styles.subheading}>Discover amazing events near you.</p>
             <Search event={props.event}/>
         </div>
     )
@@ -27,5 +27,17 @@ const styles = {
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+    },
+
+    h1: {
+        font: '900 60px lato',
+        color: '#1F2B45',
+        marginBottom: '0'
+    },
+
+    subheading: {
+        font: '400 30px lato',
+        color: '#1F2B45',
+        
     }
 }
