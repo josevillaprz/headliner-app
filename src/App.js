@@ -2,7 +2,7 @@
 import './App.css';
 
 // react browser import
-import { BrowserRouter as Router } from 'react-router-dom' 
+import { HashRouter as Router } from 'react-router-dom' 
 
 // component imports
 import Header from './components/Header'
