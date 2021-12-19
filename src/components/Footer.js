@@ -9,7 +9,7 @@ const Footer = () => {
             <NavLink to='/'><img src={logo} alt="hedliner website logo" style={styles.logo}/></NavLink>
             <nav>
                 <NavLink to='/' style={styles.navlink}>Home</NavLink>
-                <NavLink to='/Contact' style={styles.navlink}>Contact</NavLink>
+                <NavLink to='/Contact' style={styles.navlink}>Blog</NavLink>
             </nav>
         </footer>
     );
@@ -34,6 +34,9 @@ const styles = {
     },
 
     navlink: {
-        margin: '0 10px',
+        margin: '0 20px',
+        font: '900 16px lato',
+        textDecoration: 'none',
+        color: '#1f2b45'
     }
 }

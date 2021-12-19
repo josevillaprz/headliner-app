@@ -6,7 +6,7 @@ import Search from './Search'
 const Hero = (props) => {
     return (
         <div style={styles.container}>
-            <h1 style={styles.h1}>Find Your next big music event.</h1>
+            <h1 style={styles.h1}>Find your next big music event.</h1>
             <p style={styles.subheading}>Discover amazing events near you.</p>
             <Search event={props.event}/>
         </div>

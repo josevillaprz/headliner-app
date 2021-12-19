@@ -54,11 +54,13 @@ const styles = {
 
     location: {
         font: '400 16px lato',
-        alignSelf: 'end'
+        alignSelf: 'end',
+        color: '#636B7D'
     },
 
     date: {
         font: '700 16px lato',
-        alignSelf: 'end'
+        alignSelf: 'end', 
+        color: '#636B7D'
     },
 }

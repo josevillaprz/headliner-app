@@ -11,7 +11,7 @@ const Header = () => {
             <NavLink to='/'><img src={logo} alt="hedliner website logo" style={styles.logo}/></NavLink>
             <nav>
                 <NavLink to='/' style={styles.navlink}>Home</NavLink>
-                <NavLink to='Contact' style={styles.navlink}>Contact</NavLink>
+                <NavLink to='blog' style={styles.navlink}>Blog</NavLink>
             </nav>
         </header>
     )
@@ -28,7 +28,8 @@ const styles = {
         height: '100px',
         padding: '0 102px',
         justifyContent: 'space-between',
-        marginBottom: '30px'
+        marginBottom: '30px',
+        boxShadow: '0px 3px 8px 0px #CACACA'
     },
 
     logo: {
@@ -36,6 +37,9 @@ const styles = {
     },
 
     navlink: {
-        margin: '0 10px',
+        margin: '0 20px',
+        font: '900 16px lato',
+        textDecoration: 'none',
+        color: '#1f2b45'
     }
 }

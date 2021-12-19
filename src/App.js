@@ -27,7 +27,6 @@ function App() {
 
 export default App;
 
-
 const styles = {
   container: {
     position: 'relative',

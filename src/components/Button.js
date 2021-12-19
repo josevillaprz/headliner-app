@@ -12,7 +12,7 @@ export default Button;
 
 const styles = {
     button: {
-        backgroundColor: '#63d9fd',
+        backgroundColor: '#4fed96',
         padding: '10px 20px',
         borderRadius: '5px',
         textDecoration: 'none',
