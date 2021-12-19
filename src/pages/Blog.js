@@ -10,7 +10,7 @@ const Blog = () => {
     useEffect(() =>{
         // hardcoded blog posts for this example
         const posts = [
-            { title: 'The Best Bands of 2021', description: 'Check out who made the biggest impact this year', img: ''},
+            { title: 'The Best Bands of 2021', description: 'Check out who made the biggest impact this year', img: '../images/hero.jpg'},
             { title: 'Staff Picks: Gigs of 2021', description: 'See our picks for the best shows of 2021', img: '../images/hero.jpg'},
             { title: '2021 Highlights', description: 'Check out our yearly highlight replays', img: '../images/hero.jpg'}
         ]
