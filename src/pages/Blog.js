@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import BlogPost from '../components/BlogPost';
 
 import BlogImg from '../images/blog-hero.jpg';
+import blog1 from '../images/blog1.jpg'
+import blog2 from '../images/blog2.jpg'
+import blog3 from '../images/blog3.jpg'
 
 const Blog = () => {
 
@@ -10,9 +13,9 @@ const Blog = () => {
     useEffect(() =>{
         // hardcoded blog posts for this example
         const posts = [
-            { title: 'The Best Bands of 2021', description: 'Check out who made the biggest impact this year', img: '../images/hero.jpg'},
-            { title: 'Staff Picks: Gigs of 2021', description: 'See our picks for the best shows of 2021', img: '../images/hero.jpg'},
-            { title: '2021 Highlights', description: 'Check out our yearly highlight replays', img: '../images/hero.jpg'}
+            { title: 'The Best Bands of 2021', description: 'Check out who made the biggest impact this year', img: {blog1}},
+            { title: 'Staff Picks: Gigs of 2021', description: 'See our picks for the best shows of 2021', img: {blog2}},
+            { title: '2021 Highlights', description: 'Check out our yearly highlight replays', img: {blog3}}
         ]
         setBlogPosts(posts)
     }, [])
@@ -25,7 +28,7 @@ const Blog = () => {
             </div>
             <ul style={styles.blogList}>
                 {blogPosts !== null && blogPosts.map(blogPost => (
-                    <BlogPost title={blogPost.title} description={blogPost.description}/>
+                    <BlogPost title={blogPost.title} description={blogPost.description} src={blogPost.img}/>
                 ))}
             </ul>
         </div>
