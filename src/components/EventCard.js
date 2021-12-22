@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Button from '../components/Button'
-
 const EventCard = (props) => {
     return (
         <li style={styles.container}>
@@ -11,7 +9,6 @@ const EventCard = (props) => {
                 <p style={styles.location}> {props.event._embedded.venues[0].city.name} ,{props.event._embedded.venues[0].country.countryCode}</p>
                 <p style={styles.date}>{props.event.dates.start.localDate}</p>
             </div>
-            <Button btnText='Tickets' url={props.event.url} style={styles.btn}/>
         </li>
     );
 };

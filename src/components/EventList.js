@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 
 import EventCard from '../components/EventCard'
 
@@ -7,8 +8,10 @@ const EventList = (props) => {
         <section style={styles.container}>
             <h1>{props.title}</h1>
             <ul style={styles.list}>
-                {props.events.map((event, i) => (
-                    <EventCard event={event} key={i} />
+                {props.events.map((event) => (
+                    <Link to={`/${event.id}`} key={event.id} style={styles.link}>
+                        <EventCard event={event} key={event.id} />
+                    </Link>
                 ))}
             </ul>
         </section>
@@ -28,5 +31,9 @@ const styles = {
         padding: '0',
         flexWrap: 'wrap',
         justifyContent: 'space-between'
+    },
+
+    link: {
+        textDecoration: 'none'
     }
 }
