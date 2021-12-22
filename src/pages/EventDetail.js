@@ -18,7 +18,7 @@ const EventDetail = ({match}) => {
 
     return (
         <div>
-            {event === '' ? <h1>Loading...</h1> : 
+            {event === '' ? <h1 style={styles.loading}>Loading...</h1> : 
             <div>
                 <img src={event.images[0].url} alt='promo content'/>
                 <h1>{event.name}</h1>
@@ -30,3 +30,12 @@ const EventDetail = ({match}) => {
 }
 
 export default EventDetail;
+
+const styles = {
+    loading: {
+        height: '100%',
+        textAlign: 'center',
+        marginTop: '300px',
+        font: '900 50px lato'
+    }
+}

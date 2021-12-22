@@ -9,7 +9,7 @@ const EventList = (props) => {
             <h1>{props.title}</h1>
             <ul style={styles.list}>
                 {props.events.map((event) => (
-                    <Link to={`/${event.id}`} key={event.id}>
+                    <Link to={`/${event.id}`} key={event.id} style={styles.link}>
                         <EventCard event={event} key={event.id} />
                     </Link>
                 ))}
@@ -31,5 +31,9 @@ const styles = {
         padding: '0',
         flexWrap: 'wrap',
         justifyContent: 'space-between'
+    },
+
+    link: {
+        textDecoration: 'none'
     }
 }
