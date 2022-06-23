@@ -15,7 +15,7 @@ const EventDetail = ({ match }) => {
       setEvent(data._embedded.events[0]);
     };
     fetchEvent();
-  }, [setEvent]);
+  }, []);
 
   return (
     <div>
