@@ -1,0 +1,10 @@
+.container {
+    max-width: 1440px;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin: 0 auto;
+    justify-content: center;
+}
