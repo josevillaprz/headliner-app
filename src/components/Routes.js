@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes as Switch } from "react-router-dom";
 
 // import pages
 import HomePage from "../pages/Homepage";
@@ -11,9 +11,9 @@ const Routes = () => {
   return (
     <React.Fragment>
       <Switch>
-        <Route exact path="/headliner-app" render={() => <HomePage />} />
-        <Route exact path="/blog" component={Blog} />
-        <Route path="/:id" component={EventDetail} />
+        <Route exact path="/headliner-app" element={<HomePage />} />
+        <Route exact path="/blog" element={<Blog />} />
+        <Route path="/:id" element={<EventDetail />} />
       </Switch>
     </React.Fragment>
   );

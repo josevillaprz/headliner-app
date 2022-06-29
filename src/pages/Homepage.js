@@ -1,39 +1,47 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from "react";
 
-// component import
-import Hero from '../components/Hero'
-import EventList from '../components/EventList'
+// COMPONENTS
+import Hero from "../components/Hero";
+import SearchBar from "../components/SearchBar/SearchBar";
+import EventList from "../components/EventList/EventList";
 
 const HomePage = (props) => {
-    // hooks
-    const [searchText, setSearchText] = useState(null)
-    const [eventList, setEventList] = useState(null)
+  //   // STATE
+  const [searchText, setSearchText] = useState("");
+  const [error, setError] = useState(false);
+  const [eventList, setEventList] = useState([]);
 
-    const NewSearch = (e) => {
-        e.preventDefault();
-        // validate user input was correct need to implement ****
-        const userInput = e.target[0].value
-        // set state value once validated
-        setSearchText(userInput);
+  //   // FUNCTIONS
+  const changeHandler = (e) => {
+    const inputText = e.target.value;
+    setSearchText(inputText);
+  };
+
+  const submitHandler = async (e) => {
+    e.preventDefault();
+    // Make API request if not blank
+    if (searchText.trim() !== "") {
+      const response = await fetch(
+        `https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&keyword=${searchText}&apikey=bKX5jS9T2TlroD8wMcQ0Gth24As1CZF6`
+      );
+      const data = await response.json();
+      if (data.page.totalPages === 0) {
+        setError(true);
+      } else {
+        setEventList(data._embedded.events);
+        console.log(data._embedded.events);
+      }
     }
+  };
 
-    useEffect(() => {
-        if(searchText !== null){
-            async function fetchAPI(){
-                const response = await fetch(`https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&keyword=${searchText}&apikey=bKX5jS9T2TlroD8wMcQ0Gth24As1CZF6`);
-                const data = await response.json();
-                setEventList(data._embedded.events)
-            }
-            fetchAPI();
-        }
-    }, [searchText])
-
-    return(
-        <div>
-            <Hero event={NewSearch}/>
-            {eventList !== null && <EventList title='Search results...' events={eventList}/> }
-        </div>
-    )
-}
+  // JSX
+  return (
+    <div>
+      {/* <Hero submitHandler={submitHandler} changeHandler={changeHandler} /> */}
+      <SearchBar submitHandler={submitHandler} changeHandler={changeHandler} />
+      {eventList.length > 0 && <EventList events={eventList} />}
+    </div>
+  );
+};
 
 export default HomePage;
