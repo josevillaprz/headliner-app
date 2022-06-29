@@ -5,7 +5,7 @@ html {
   /* Sets up the Base 10 stuff */
 }
 
-body, div, section, ul, li, h1, h2, p, img {
+body, div, section, ul, li, h1, h2, p, img, input, button, a {
   font-family: "open sans", "Helvetica", "Arial";
   margin: 0;
   padding: 0;
@@ -13,6 +13,13 @@ body, div, section, ul, li, h1, h2, p, img {
   list-style: none;
   color: #2b2b2b;
   font-size: 1.6rem;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #f5f9fa
 }
 
 /* * {

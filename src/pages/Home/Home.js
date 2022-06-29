@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-
-// COMPONENTS
-import Hero from "../components/Hero";
-import SearchBar from "../components/SearchBar/SearchBar";
-import EventList from "../components/EventList/EventList";
+import SearchBar from "../../components/SearchBar/SearchBar";
+import EventList from "../../components/EventList/EventList";
+import styles from "./Home.module.css";
 
 const HomePage = (props) => {
   //   // STATE
@@ -36,11 +34,10 @@ const HomePage = (props) => {
 
   // JSX
   return (
-    <div>
-      {/* <Hero submitHandler={submitHandler} changeHandler={changeHandler} /> */}
+    <main className={styles.container}>
       <SearchBar submitHandler={submitHandler} changeHandler={changeHandler} />
       {eventList.length > 0 && <EventList events={eventList} />}
-    </div>
+    </main>
   );
 };
 

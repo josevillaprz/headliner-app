@@ -1,11 +1,6 @@
-// style sheet import
 import "./App.css";
-
-// react browser import
 import { BrowserRouter as Router } from "react-router-dom";
-
-// component imports
-import Header from "./components/Header";
+import Header from "./components/Header/Header";
 import Routes from "./components/Routes";
 import Footer from "./components/Footer";
 
@@ -14,9 +9,7 @@ function App() {
     <Router>
       <div className="App" style={styles.container}>
         <Header />
-        <main>
-          <Routes />
-        </main>
+        <Routes />
         <Footer />
       </div>
     </Router>

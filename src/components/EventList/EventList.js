@@ -4,13 +4,16 @@ import styles from "./EventList.module.css";
 
 const EventList = ({ events }) => {
   return (
-    <ul className={styles.container}>
-      {events.map((event) => (
-        <li className={styles.item}>
-          <EventCard event={event} key={event.id} />
-        </li>
-      ))}
-    </ul>
+    <section className={styles.container}>
+      <h1 className={styles.title}>Search results...</h1>
+      <ul className={styles.listContainer}>
+        {events.map((event) => (
+          <li className={styles.item}>
+            <EventCard event={event} key={event.id} />
+          </li>
+        ))}
+      </ul>
+    </section>
   );
 };
 

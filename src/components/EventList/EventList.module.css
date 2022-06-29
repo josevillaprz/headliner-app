@@ -1,10 +1,31 @@
 .container {
-    max-width: 1440px;
-    box-sizing: border-box;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
+    max-width: 1400px;
     margin: 0 auto;
-    justify-content: center;
+
+}
+
+.listContainer {
+    box-sizing: border-box;
+    display: grid;
+    /* flex-wrap: wrap; */
+
+    gap: 30px;
+    /* justify-content: center; */
+}
+
+.title {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+@media screen and (min-width: 768px) {
+    .listContainer {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .listContainer {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
