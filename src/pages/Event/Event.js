@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Button from "../../components/Button";
 import { useSearchParams } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import styles from "./Event.module.css";
+import EventDetailCard from "../../components/EventDetailCard/EventDetailCard";
 
 const Event = () => {
   const [event, setEvent] = useState("");
@@ -24,17 +24,7 @@ const Event = () => {
 
   return (
     <main className={styles.container}>
-      {event === "" ? (
-        <Loader />
-      ) : (
-        <section>
-          <div>
-            <img src={event.images[2].url} alt="promo content" />
-          </div>
-          <h1 className={styles.title}>{event.name}</h1>
-          <Button url={event.url} btnText="Tickets" />
-        </section>
-      )}
+      {event === "" ? <Loader /> : <EventDetailCard event={event} />}
     </main>
   );
 };

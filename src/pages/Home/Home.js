@@ -20,8 +20,6 @@ const HomePage = (props) => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    // clear state to remove component
-    setEventList([]);
     // Make API request if not blank
     if (searchText.trim() !== "") {
       setLoading(true);
