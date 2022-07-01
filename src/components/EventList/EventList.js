@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import EventCard from "../EventCard/EventCard";
 import styles from "./EventList.module.css";
 
@@ -9,7 +10,9 @@ const EventList = ({ events }) => {
       <ul className={styles.listContainer}>
         {events.map((event) => (
           <li className={styles.item}>
-            <EventCard event={event} key={event.id} />
+            <Link to={`/event?id=${event.id}`}>
+              <EventCard event={event} key={event.id} />
+            </Link>
           </li>
         ))}
       </ul>

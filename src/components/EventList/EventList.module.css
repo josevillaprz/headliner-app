@@ -1,16 +1,15 @@
 .container {
     max-width: 1400px;
     margin: 0 auto;
-
+    height: 100%;
 }
 
 .listContainer {
     box-sizing: border-box;
-    display: grid;
-    /* flex-wrap: wrap; */
-
-    gap: 30px;
-    /* justify-content: center; */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 60px;
+    justify-content: center;
 }
 
 .title {
@@ -18,14 +17,8 @@
     font-size: 1.8rem;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 900px) {
     .listContainer {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .listContainer {
-        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
     }
 }

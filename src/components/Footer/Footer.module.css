@@ -1,0 +1,27 @@
+.container {
+    margin-top: 200px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 80px;
+}
+
+.link {
+    margin-left: 40px;
+}
+
+.logo {
+    width: 120px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0 80px;
+    }
+
+    .logo {
+        width: 140px;
+    }
+}

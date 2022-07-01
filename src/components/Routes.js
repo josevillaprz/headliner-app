@@ -5,7 +5,7 @@ import { Route, Routes as Switch } from "react-router-dom";
 // import pages
 import HomePage from "../pages/Home/Home";
 import Blog from "../pages/Blog";
-import EventDetail from "../pages/EventDetail";
+import Event from "../pages/Event/Event";
 
 const Routes = () => {
   return (
@@ -13,7 +13,7 @@ const Routes = () => {
       <Switch>
         <Route exact path="/headliner-app" element={<HomePage />} />
         <Route exact path="/blog" element={<Blog />} />
-        <Route path="/:id" element={<EventDetail />} />
+        <Route path="/event" element={<Event />} />
       </Switch>
     </React.Fragment>
   );
