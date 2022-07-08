@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./Hero.module.css";
 
-const Hero = () => {
+const Hero = ({ image, title, subhead }) => {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.h1}>Find your next big music event.</h1>
-      <p className={styles.subheading}>Discover amazing events near you.</p>
+    <div
+      className={styles.container}
+      style={{ backgroundImage: `url(${image})` }}
+    >
+      <h1 className={styles.title}>{title}</h1>
+      <p className={styles.subheading}>{subhead}</p>
     </div>
   );
 };

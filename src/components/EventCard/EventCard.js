@@ -5,7 +5,7 @@ import { AiFillCalendar } from "react-icons/ai";
 
 const EventCard = ({ event }) => {
   return (
-    <article className={styles.container}>
+    <div className={styles.container}>
       <div className={styles.imgContainer}>
         <img src={event.images[2].url} alt="event" className={styles.img} />
       </div>
@@ -29,7 +29,7 @@ const EventCard = ({ event }) => {
           <p>{event.dates.start.localDate}</p>
         </div>
       </div>
-    </article>
+    </div>
   );
 };
 

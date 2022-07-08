@@ -6,14 +6,14 @@ import styles from "./Footer.module.css";
 const Footer = () => {
   return (
     <footer className={styles.container}>
-      <NavLink to="/">
+      <NavLink to="/headliner-app">
         <img src={logo} alt="hedliner website logo" className={styles.logo} />
       </NavLink>
       <nav>
-        <NavLink to="/" className={styles.link}>
+        <NavLink to="/headliner-app" className={styles.link}>
           Home
         </NavLink>
-        <NavLink to="/Contact" className={styles.link}>
+        <NavLink to="/blog" className={styles.link}>
           Blog
         </NavLink>
       </nav>
@@ -22,27 +22,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// const styles = {
-//   footer: {
-//     backgroundColor: "#F7F7F7",
-//     display: "flex",
-//     flexDirection: "row",
-//     alignItems: "center",
-//     height: "100px",
-//     padding: "0 102px",
-//     justifyContent: "space-between",
-//     marginTop: "60px",
-//   },
-
-//   logo: {
-//     width: "140px",
-//   },
-
-//   navlink: {
-//     margin: "0 20px",
-//     font: "900 16px lato",
-//     textDecoration: "none",
-//     color: "#1f2b45",
-//   },
-// };
